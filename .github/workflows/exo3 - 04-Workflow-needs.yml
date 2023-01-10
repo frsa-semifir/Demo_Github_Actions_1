@@ -10,7 +10,7 @@ jobs:
         run: echo "j'ai fini ma première tâche !"
 
   second-job:
-    needs: [first_job]
+    needs: [first-job]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
