@@ -1,6 +1,6 @@
 name: Push-or-Pull-?
 
-on: [push, pull_request]
+on: workflow_dispatch
 
 env:
   PUSH: C'est un push !
