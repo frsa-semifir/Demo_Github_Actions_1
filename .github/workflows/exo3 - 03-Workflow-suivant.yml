@@ -1,7 +1,7 @@
 name: Workflow-suivant
 on: 
   workflow_run:
-    workflow: [Merged-PR]
+    workflows: [Merged-PR]
     types: [completed]
 
 jobs:

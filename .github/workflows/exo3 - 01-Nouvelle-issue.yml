@@ -1,6 +1,6 @@
 name: Nouvelle-issue
 on: 
-  issue: 
+  issues: 
     types: [opened]
 
 jobs:
