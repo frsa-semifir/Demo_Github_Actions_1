@@ -1,0 +1,12 @@
+name: Nouvelle-issue
+on: 
+  issue: 
+    types: [opened]
+
+jobs:
+  trigger-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: issue
+        run: echo "issue ouverte"

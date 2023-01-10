@@ -1,0 +1,13 @@
+name: Workflow-suivant
+on: 
+  workflow_run:
+    workflow: [Merged-PR]
+    types: [completed]
+
+jobs:
+  trigger-workflow_run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: workflow_run
+        run: echo "je me suis lancé à la suite de Merged-PR et je fonctionne !"
