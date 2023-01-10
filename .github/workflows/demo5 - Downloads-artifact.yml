@@ -1,0 +1,32 @@
+name: Upload Artifact
+
+on: workflow_dispatch
+
+jobs:
+  upload:
+    name: Upload
+    runs-on: ubuntu-latest
+    steps:
+      - name: create file
+        run : echo "Coucou" > artifact.txt
+      - name: uplodad artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifact
+          path: artifact.txt
+# Second job pour récupérer le fichier
+  download:
+    needs: upload
+    name: download
+    runs-on: ubuntu-latest
+    steps:
+      - name: download file
+        # On récupère le fichier via l'action download-artifact
+        uses: actions/download-artifact@v3
+        with:
+            # On lui précise le nom de l'artifact à récupérer
+            # Si non précisé, le nom par défaut est "artifact"
+          name: artifact
+      - name: read-file
+        # Commande linux pour lire le contenu d'un fichier
+        run: cat artifact.txt
