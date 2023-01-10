@@ -1,0 +1,9 @@
+name: Hello Wolrd
+on: [push]
+jobs:
+  Hello World:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Hello World !
+        run: echo "Hello World"
