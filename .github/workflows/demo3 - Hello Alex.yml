@@ -2,7 +2,7 @@ name: Hello-Alex
 on: workflow_dispatch
 
 env:
-  NAME: Alexia
+  NAME: Alex
 
 jobs:
   say_Hello:
