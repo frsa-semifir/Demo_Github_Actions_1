@@ -4,13 +4,13 @@ on: workflow_dispatch
 env:
   NAME: Alex
 
-  jobs:
-    say_Hello:
-      runs-on: ubuntu-latest
-      steps:
-        - name: "Dit bonjour"
-          if: ${{env.NAME != 'Alex'}}
-          run: echo "Salut toi ! Tu n'es pas Alex ?! oO"
-        - name: "Coucou Alex"
-          if: ${{env.NAME == 'Alex'}}
-          run: echo "Salut $NAME ! tu as l'air en pleine forme !"
+jobs:
+  say_Hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Dit bonjour"
+        if: ${{env.NAME != 'Alex'}}
+        run: echo "Salut toi ! Tu n'es pas Alex ?! oO"
+      - name: "Coucou Alex"
+        if: ${{env.NAME == 'Alex'}}
+        run: echo "Salut $NAME ! tu as l'air en pleine forme !"
