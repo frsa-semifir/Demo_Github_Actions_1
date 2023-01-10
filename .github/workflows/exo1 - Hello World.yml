@@ -1,7 +1,7 @@
-name: Hello Wolrd
+name: Hello-Wolrd
 on: [push]
 jobs:
-  Hello World:
+  Hello-World:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
