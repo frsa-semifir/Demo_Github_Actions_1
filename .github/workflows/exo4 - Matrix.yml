@@ -12,4 +12,5 @@ jobs:
         NOMS: [Geralt, Link, Tarnished]
 
     steps:
-      - run: echo "${{ matrix.NOMS }} mange une ${{ matrix.FRUITS }} !"
+      - name: Qui mange quoi ?
+        run: echo "${{ matrix.NOMS }} mange une ${{ matrix.FRUITS }} !"
