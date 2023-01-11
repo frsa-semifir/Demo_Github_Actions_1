@@ -1,0 +1,13 @@
+name: WS_Conventional_Commit
+
+on:
+  push:
+    branches: [ feature/**, hotfix/** ]
+
+jobs:
+  build:
+    name: WS_Conventional_Commit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: webiny/action-conventional-commits@v1.1.0

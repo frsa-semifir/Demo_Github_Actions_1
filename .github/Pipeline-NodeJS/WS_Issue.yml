@@ -1,0 +1,18 @@
+name: WS_Issue
+
+on:
+  issues:
+    types: [assigned]
+    branches: [develop]
+
+jobs:
+  WS_Issue:
+    if:  startsWith(github.event.issue.title, 'feature/')
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      - name: Create Issue Branch
+        uses: robvanderleek/create-issue-branch@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
