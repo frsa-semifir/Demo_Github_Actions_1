@@ -11,9 +11,8 @@ jobs:
         FRUITS: [pomme, banane, poire, orange]
         NOMS: [Geralt, Link, Tarnished]
 
-
     steps:
       run: echo "$NOMS mange une $FRUITS !"
         with:
-          FRUITS: ${{ matrix.noms }}
-          NOMS: ${{ matrix.fruits }}
+          FRUITS: ${{ matrix.FRUITS }}
+          NOMS: ${{ matrix.NOMS }}
